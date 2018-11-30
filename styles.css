@@ -15,8 +15,8 @@ html {
  */
 
 body {
-    font-family: 'Work Sans', sans-serif;
     margin: 0;
+    font-family: 'Work Sans', sans-serif;
 }
 
 /**
@@ -837,8 +837,8 @@ legend {
     justify-content: center;
     -ms-flex-align: center;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
-    background: url("../images/Searchs_004.png");
+    /* font-family: 'Poppins', sans-serif; */
+    background: url("../images/Searchs_005.jpg");
     background-size: cover;
     background-position: center center;
     padding: 15px;
