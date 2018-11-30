@@ -78,7 +78,6 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -135,7 +134,6 @@ b, strong {
  */
 
 code, kbd, samp {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -231,7 +229,7 @@ svg:not(:root) {
  */
 
 button, input, optgroup, select, textarea {
-  font-family: sans-serif;
+  font-family: 'Work Sans', sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -837,7 +835,6 @@ legend {
   justify-content: center;
   -ms-flex-align: center;
   align-items: center;
-  /* font-family: 'Poppins', sans-serif; */
   background: url("../images/Searchs_005.jpg");
   background-size: cover;
   background-position: center center;
@@ -980,7 +977,6 @@ legend {
 
 .s004 form .suggestion-wrap span {
   font-size: 14px;
-  font-family: 'Helvetica', sans-serif;
   display: inline-block;
   padding: 0 15px;
   line-height: 32px;
