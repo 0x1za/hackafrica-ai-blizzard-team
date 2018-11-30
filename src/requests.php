@@ -29,3 +29,12 @@ function make_get_request($route=null, $args=null){
         return json_decode($response, true);
     }
 }
+
+function search($text){
+    $data = explode(" ", strtolower($text));
+    $endpoint = $data[0];
+    if ($endpoint == 'population'){
+        
+    }
+    return $data;
+}
