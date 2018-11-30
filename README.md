@@ -1,0 +1,2 @@
+# hackafrica-ai-inyange-team
+Presenting an interactive, beautiful and accurate source of information about African countries and cities is very important while telling our story. Your challenge if accepted is to build a web or mobile app for interacting with important information/statistics about African countries and cities. For example, an app can allow a user to be able to navigate from list of African countries to basic details about each country and list of urban areas to details about each urban area.
