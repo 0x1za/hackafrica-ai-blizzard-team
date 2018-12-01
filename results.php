@@ -12,7 +12,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="css/results.css">
+    <link rel="stylesheet" href="http://localhost/blizzards/css/results.css">
     <title>Results</title>
 </head>
 <body>
