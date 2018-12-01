@@ -74,6 +74,8 @@ if (isset($_POST['submit'])) {
 //            echo "Has Date and Quantity!!";
             $search_results = make_get_request('/population/'.$results['DATE'][0].'/aged/'.substr($results['QUANTITY'][0], 0, 2).'/');
 //            echo var_dump($search_results);
+        } elseif (in_array("LOCATION" , $types) && in_array("QUANTITY", $types)) {
+            $search_results = make_get_request('/population/'.$results['LOCATION'][0].'/'.substr($results['QUANTITY'][0], 0, 2).'/');
         }
 
         $_SESSION['results'] = $search_results;

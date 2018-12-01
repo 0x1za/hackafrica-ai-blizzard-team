@@ -21,8 +21,33 @@ session_start();
 <?php
 $i = 0;
 $data = $_SESSION['results'];
-while ($i < count($data)){
-    echo '<div class="row">
+if (count($data) > 1){
+    echo '<div class="row">';
+    while ($i < count($data)){
+        echo '<div class="col s12 m4">
+            <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                    <span class="card-title">Data</span>
+                    <p>Females: '.$data[$i]['females'].'</p>
+                    <p>Country: '.$data[$i]['country'].'</p>
+                    <p>Age: '.$data[$i]['age'].'</p>
+                    <p>Males: '.$data[$i]['males'].'</p>
+                    <p>Year: '.$data[$i]['year'].'</p>
+                    <p>Total: '.$data[$i]['total'].'</p>
+                </div>
+                <div class="card-action">
+                    <a href="http://localhost/blizzard/index.php">Search Again</a>
+                </div>
+            </div>
+        </div>';
+        $i++;
+    }
+    echo '</div>';
+} elseif (count($data) == 0){
+    header('Location: http://localhost/blizzard/404.html');
+} else {
+    while ($i < count($data)){
+        echo '<div class="row">
         <div class="col s12 m12">
             <div class="card blue-grey darken-1">
                 <div class="card-content white-text">
@@ -35,15 +60,16 @@ while ($i < count($data)){
                     <p>Total: '.$data[$i]['total'].'</p>
                 </div>
                 <div class="card-action">
-                    <a href="./index.php">Search Again</a>
-                    <a href="#">link</a>
+                    <a href="http://localhost/blizzard/index.php">Search Again</a>
                 </div>
             </div>
         </div>
     </div>';
-    $i++;
+        $i++;
+    }
 }
 ?>
+
 </div>
 </body>
 
