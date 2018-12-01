@@ -1,4 +1,6 @@
 <?php
+session_start();
+ob_start();
 include ('src/requests.php');
 ?>
 
@@ -64,14 +66,20 @@ if (isset($_POST['submit'])) {
             $i++;
         }
         #echo var_dump($types);
-        if (in_array( "DATE" , $types) && in_array("QUANTITY", $types)){
-            echo "Has Date and Quantity!!";
-            echo $results['DATE'][0];
-//            $search_results = make_get_request('/population/'.$results['DATE'].'/aged/'.substr($age, 0, 2).'/');
+        if (in_array("DATE", $types) && in_array("LOCATION", $types) && in_array("QUANTITY", $types)) {
+//            echo "Has Date and Location!";
+            $search_results = make_get_request('/population/'.$results['DATE'][0].'/'.$results['LOCATION'][0].'/'.substr($results['QUANTITY'][0], 0, 2).'/');
 //            echo var_dump($search_results);
-        } elseif (in_array("DATE", $results) && in_array("LOCATION", $results) && in_array("QUANTITY", $results)) {
-            echo "Has Date and Location!";
+        } elseif (in_array( "DATE" , $types) && in_array("QUANTITY", $types)){
+//            echo "Has Date and Quantity!!";
+            $search_results = make_get_request('/population/'.$results['DATE'][0].'/aged/'.substr($results['QUANTITY'][0], 0, 2).'/');
+//            echo var_dump($search_results);
         }
+
+        $_SESSION['results'] = $search_results;
+        $_SESSION['search'] = $search;
+
+        header('Location: results.php/');
     }
 }
 ?>
